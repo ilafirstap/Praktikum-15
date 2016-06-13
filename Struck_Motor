@@ -1,0 +1,44 @@
+# include <iostream>
+using namespace std;
+
+//Membuat kelas MOTOR
+
+struct MOTOR {
+
+	string merk;
+	int tahun;
+	string nopolisi;
+	string warna;
+};
+
+MOTOR yamaha;
+
+void setmotor ()
+{
+
+    cout<<"Masukkan Merk : ";
+    cin>>yamaha.merk;
+    cout<<"Masukkan Tahun : ";
+    cin>>yamaha.tahun;
+    cout<<"Masukkan No Polisi : ";
+    cin>>yamaha.nopolisi;
+    cout<<"Masukkan Warna : ";
+    cin>>yamaha.warna;
+}
+
+void showinfomotor () {
+    cout<<"-------------------------------"<<endl;
+    cout<<"Merk :"<<yamaha.merk<<endl;
+    cout<<"Tahun :"<<yamaha.tahun<<endl;
+    cout<<"No.Polisi :"<<yamaha.nopolisi<<endl;
+    cout<<"Warna :"<<yamaha.warna<<endl;
+}
+
+int main ()
+{
+    setmotor();
+    showinfomotor();
+
+    return 0;
+}
+
