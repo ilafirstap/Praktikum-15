@@ -1,0 +1,67 @@
+# include <iostream>
+using namespace std;
+
+//laporan hasil belajar mahasiswa
+
+struct hasil_belajar {
+
+	int nim;
+	string nama;
+	int notelepon;
+	float nilai_tugas;
+	float nilai_uts;
+	float nilai_uas;
+	float nilai_quiz;
+
+};
+
+hasil_belajar input;
+
+void atribut ()
+{
+
+    cout<<"Masukkan Nama : ";
+    cin>>input.nama;
+    cout<<"Masukkan NIM : ";
+    cin>>input.nim;
+    cout<<"Masukkan No Telepon : ";
+    cin>>input.notelepon;
+    cout<<"Masukkan Nilai Tugas: ";
+    cin>>input.nilai_tugas;
+    cout<<"Masukkan Nilai UTS: ";
+    cin>>input.nilai_tugas;
+    cout<<"Masukkan Nilai UAS: ";
+    cin>>input.nilai_uas;
+    cout<<"Masukkan Nilai QUIZ: ";
+    cin>>input.nilai_quiz;
+}
+
+void showatribut () {
+    cout<<"-------------------------------"<<endl;
+    cout<<"Nama :"<<input.nama<<endl;
+    cout<<"NIM :"<<input.nim<<endl;
+    cout<<"No.telepon :"<<input.notelepon<<endl;
+    cout<<"Nilai Tugas:"<<input.nilai_tugas<<endl;
+    cout<<"Nilai UTS:"<<input.nilai_uts<<endl;
+    cout<<"Nilai UAS:"<<input.nilai_uas<<endl;
+    cout<<"Nilai QUIZ:"<<input.nilai_quiz<<endl;
+
+//Nilai Akhir
+}
+void output() {
+    float nilai_akhir;
+nilai_akhir=(0.25*input.nilai_uas)+(0.25*input.nilai_uts)+(0.3*input.nilai_tugas)+(0.2*input.nilai_quiz);
+cout<<"Nilai Akhir :" << nilai_akhir;
+}
+
+
+int main ()
+{
+    atribut();
+    showatribut();
+    output ();
+
+    return 0;
+}
+
+
